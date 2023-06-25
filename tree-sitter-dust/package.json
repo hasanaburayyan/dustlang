@@ -1,0 +1,19 @@
+{
+  "name": "tree-sitter-dust",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "npx -y tree-sitter-cli generate",
+    "build:wasm": "npm run build && npx -y tree-sitter-cli build-wasm --docker",
+    "playground": "npm run build:wasm && npx -y tree-sitter-cli playground"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  }
+}
